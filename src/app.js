@@ -1,39 +1,4 @@
-// const express = require('express');
-// const app = express();
-// const path = require('path');
-// // const port= 8000;
-// const port = process.env.PORT || 8000;
 
-
-// // public static path
-
-// const static_path = path.join(__dirname,"../public");
-// app.set('view engine','hbs');
-// app.use(express.static(static_path));
-
-
-
-
-
-// // routing
-// app.get("",(req,res)=>{
-//     res.render('index.hbs');
-// })
-
-// app.render("/about",(req,res)=>{
-//     res.render('about.hbs');
-// })
-
-// app.get("/weather",(req,res)=>{
-//     res.render('weather.hbs');
-// })
-
-// app.get("*",(req,res)=>{
-//     res.render('404err.hbs');
-// })
-// app.listen(port,()=>{
-//     console.log(`listening to the port at ${port} `)
-// })
 const express = require('express');
 const app = express();
 const hbs =require('hbs');
