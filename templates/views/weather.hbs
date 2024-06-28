@@ -39,24 +39,32 @@
 <script src="js/main.js"></script>
 <script>
     
-    const getCurrentDay=()=>{
-        let weekday = new Array(7);
-        weekday[0]="Sunday";
-         weekday[1]="Monday";
-          weekday[2]="Tuesday";
-           weekday[3]="Wednesday";
-            weekday[4]="Thursday";
-             weekday[5]="Friday";
-              weekday[6]="Saturday";
+   
+    const getCurrentDayAndDate = () => {
+            let weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            
+            let currentTime = new Date();
+            
+            let dayOfWeek = weekday[currentTime.getDay()];
+            let currentDate = currentTime.getDate();
+            let currentMonth = currentTime.getMonth() + 1; // Months are zero-based
+            let currentYear = currentTime.getFullYear();
+            
+            let dayElement = document.getElementById('day');
+            let dateElement = document.getElementById('date');
+            
+            if (dayElement) {
+                dayElement.innerText = dayOfWeek;
+            }
+            
+            if (dateElement) {
+                dateElement.innerText = `${currentDate}/${currentMonth}/${currentYear}`;
+            }
+        };
 
-              let currentTime = new Date();
-             
-               days = weekday[currentTime.getDay()];
-             let day = document.getElementById('day');
-             day.innerText = days;
-
-    };
-    getCurrentDay();
+        getCurrentDayAndDate();
+    
+  
 
 </script>
 </body>
